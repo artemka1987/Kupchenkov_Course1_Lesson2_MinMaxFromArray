@@ -1,4 +1,5 @@
-import java.sql.Array;
+package Kupchenkov_Course1_Lesson2_MinMaxFromArray;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -14,12 +15,12 @@ public class MaxMinFromArray {
 
         int arraySize;
 
+        Random random = new Random();
         System.out.println("Введите размер масива");
         arraySize = readPositiveIntValueFromConsole();
-        System.out.println(arraySize);
         int[] array = new int[arraySize];
         for (int i = 0; i < array.length; i++){
-            array[i] = (int)(Math.random() * 100);
+            array[i] = random.nextInt(100);
         }
         System.out.println("Массив: " + Arrays.toString(array));
 //        Arrays.sort(array);
